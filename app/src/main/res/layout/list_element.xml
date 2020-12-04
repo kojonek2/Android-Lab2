@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/elementPicture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/element_picture_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/elementTitle"
+        app:layout_constraintDimensionRatio="h,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/picture_et41" />
+
+    <TextView
+        android:id="@+id/elementTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/elementPicture" />
+
+    <ImageView
+        android:id="@+id/elementCategoryImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/icon_background"
+        app:layout_constraintWidth_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="@+id/elementPicture"
+        app:layout_constraintEnd_toEndOf="@+id/elementPicture"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/category_electric"
+        android:contentDescription="@string/element_category_picture_description" />
+
+    <ImageView
+        android:id="@+id/elementFavourite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintWidth_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="@+id/elementPicture"
+        app:layout_constraintEnd_toStartOf="@+id/elementCategoryImage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:tint="@color/favourite_disabled_colour"
+        android:tintMode="multiply"
+        app:srcCompat="@drawable/icon_favourite"
+        android:contentDescription="@string/icon_favourite_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>
